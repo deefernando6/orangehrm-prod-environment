@@ -1,6 +1,6 @@
 services:
   web:
-    image: orangehrm/prod-environment:php-8.3-latest
+    image: orangehrm/prod-environment:ubuntu24.04-php8.3-latest
     ports:
       - "443:443"
     volumes:
