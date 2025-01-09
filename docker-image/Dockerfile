@@ -46,9 +46,9 @@ cronie
 RUN dnf install -y libmemcached-devel 
 
 
-# Enable PHP 7.4 module
+# Enable PHP 8.2 module
 RUN dnf module reset php -y
-RUN dnf module enable php:7.4 -y
+RUN dnf module enable php:8.2 -y
 
 # Install PHP 
 RUN dnf install -y php
@@ -118,7 +118,7 @@ COPY apache-config.conf /etc/httpd/sites-available/orangehrm.conf
 
 
 # Copy IonCube loader and PHP configuration files
-COPY ioncube/ioncube_loader_lin_7.4.so /usr/lib64/php/modules/ioncube_loader_lin_7.4.so
+COPY ioncube/ioncube_loader_lin_8.2.so /usr/lib64/php/modules/ioncube_loader_lin_8.2.so
 COPY php.ini /etc/php.ini
 
 # Copy Cert and Private Keys
@@ -149,7 +149,7 @@ RUN dnf module reset mariadb -y
 # Enable the MariaDB repository
 RUN cd ~ && \ 
 curl -LsS -O https://downloads.mariadb.com/MariaDB/mariadb_repo_setup && \
-bash mariadb_repo_setup --mariadb-server-version=10.4.22
+bash mariadb_repo_setup --mariadb-server-version=10.11.7 --skip-check-installed
 
 # Refresh the repository cache
 RUN dnf makecache
