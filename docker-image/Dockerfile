@@ -48,7 +48,7 @@ RUN dnf install -y libmemcached-devel
 
 # Enable PHP 7.4 module
 RUN dnf module reset php -y
-RUN dnf module enable php:7.4 -y
+RUN dnf module enable php:8.2 -y
 
 # Install PHP 
 RUN dnf install -y php
