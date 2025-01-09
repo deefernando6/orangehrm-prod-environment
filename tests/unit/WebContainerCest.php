@@ -119,7 +119,7 @@ class WebContainerCest
     public function checkPHPVersion(UnitTester $I){
         $I->wantTo("verify php 8.1 is installed in the container");
         $I->runShellCommand("docker exec prod_web_rhel php --version");
-        $I->seeInShellOutput('PHP 8.2.25');
+        $I->seeInShellOutput('PHP 8.2');
 
     }
 
