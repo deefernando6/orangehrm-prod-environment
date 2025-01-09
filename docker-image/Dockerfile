@@ -118,7 +118,7 @@ COPY apache-config.conf /etc/httpd/sites-available/orangehrm.conf
 
 
 # Copy IonCube loader and PHP configuration files
-COPY ioncube/ioncube_loader_lin_7.4.so /usr/lib64/php/modules/ioncube_loader_lin_7.4.so
+COPY ioncube/ioncube_loader_lin_8.2.so /usr/lib64/php/modules/ioncube_loader_lin_8.2.so
 COPY php.ini /etc/php.ini
 
 # Copy Cert and Private Keys
