@@ -46,7 +46,7 @@ cronie
 RUN dnf install -y libmemcached-devel 
 
 
-# Enable PHP 7.4 module
+# Enable PHP 8.2 module
 RUN dnf module reset php -y
 RUN dnf module enable php:8.2 -y
 
